@@ -9,7 +9,6 @@ export default function App() {
     return (
         <View style={[screenStyle.container, styles.container]}>
             <Text style={[styles.text]}>Color scheme: {useColorScheme()}</Text>
-            <StatusBar />
         </View>
     );
 }
