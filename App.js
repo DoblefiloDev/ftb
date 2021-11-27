@@ -1,26 +1,23 @@
 import * as React from 'react';
-import { Text, useColorScheme, View } from 'react-native';
+import { Text, View, StyleSheet, useColorScheme } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { Colors } from './src/styles';
+import getStyleSheet from './src/config/colorscheme';
 
 export default function App() {
-  const colorScheme = useColorScheme();
+    const styles = getStyleSheet();
 
-  const themeTextStyle =
-    colorScheme === 'light'
-      ? Colors.styles.lightThemeText
-      : Colors.styles.darkThemeText;
-  const themeContainerStyle =
-    colorScheme === 'light'
-      ? Colors.styles.lightContainer
-      : Colors.styles.darkContainer;
-
-  return (
-    <View style={[Colors.styles.container, themeContainerStyle]}>
-      <Text style={[Colors.styles.text, themeTextStyle]}>
-        Color scheme: {colorScheme}
-      </Text>
-      <StatusBar />
-    </View>
-  );
+    return (
+        <View style={[screenStyle.container, styles.container]}>
+            <Text style={[styles.text]}>Color scheme: {useColorScheme()}</Text>
+            <StatusBar />
+        </View>
+    );
 }
+
+const screenStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
