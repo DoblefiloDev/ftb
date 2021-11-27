@@ -1,38 +1,41 @@
 import * as React from 'react';
-import { Button, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
-    </View>
-  );
-}
-
-function SettingsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-    </View>
-  );
-}
-
-const Tab = createBottomTabNavigator();
+import { Text, useColorScheme, StyleSheet, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
+  const colorScheme = useColorScheme();
+
+  const themeTextStyle =
+    colorScheme === 'light' ? styles.lightThemeText : styles.darkThemeText;
+  const themeContainerStyle =
+    colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
+
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View style={[styles.container, themeContainerStyle]}>
+      <Text style={[styles.text, themeTextStyle]}>
+        Color scheme: {colorScheme}
+      </Text>
+      <StatusBar />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  lightContainer: {
+    backgroundColor: '#d0d0c0',
+  },
+  darkContainer: {
+    backgroundColor: '#242c40',
+  },
+  lightThemeText: {
+    color: '#242c40',
+  },
+  darkThemeText: {
+    color: '#d0d0c0',
+  },
+});
