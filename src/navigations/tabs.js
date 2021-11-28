@@ -8,7 +8,6 @@ import SettingScreen from '../screens/SettingScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import SearchScreen from '../screens/SearchScreen';
 import BurnScreen from '../screens/BurnScreen';
-import { Colors } from '../styles';
 
 const Tab = createBottomTabNavigator();
 
