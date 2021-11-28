@@ -17,6 +17,7 @@ const lightStyle = StyleSheet.create({
         borderRadius: 15,
         height: 70,
         backgroundColor: Colors.SOFT_WHITE,
+        borderTopWidth: 0,
     },
     shadow: {
         shadowColor: Colors.MAIN,
@@ -56,6 +57,7 @@ const darkStyle = StyleSheet.create({
         borderRadius: 15,
         height: 65,
         backgroundColor: Colors.SOFT_BLACK,
+        borderTopWidth: 0,
     },
     shadow: {
         shadowColor: Colors.MAIN,
