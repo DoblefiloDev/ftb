@@ -43,9 +43,9 @@ const Tabs = () => {
             screenOptions={{
                 tabBarShowLabel: false,
                 tabBarStyle: {
-                    ...theme.shadow,
                     ...theme.navBar,
                 },
+                headerShown: false,
             }}
         >
             <Tab.Screen
