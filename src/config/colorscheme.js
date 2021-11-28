@@ -8,6 +8,9 @@ const lightStyle = StyleSheet.create({
     text: {
         color: Colors.BLACK,
     },
+    navBar: {
+        backgroundColor: Colors.SOFT_BLACK,
+    },
 });
 
 const darkStyle = StyleSheet.create({
@@ -16,6 +19,9 @@ const darkStyle = StyleSheet.create({
     },
     text: {
         color: Colors.WHITE,
+    },
+    navBar: {
+        backgroundColor: Colors.SOFT_WHITE,
     },
 });
 
