@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "ftb2",
-    "slug": "ftb2",
-    "version": "1.0.0",
+    "name": "Feel the Burn",
+    "slug": "ftb",
+    "version": "alpha1.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/icons/fire-icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "Doblefilo.FeeltheBurn"
     },
     "web": {
       "favicon": "./assets/favicon.png"
