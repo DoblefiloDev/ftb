@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, useColorScheme } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
 import getStyleSheet from './src/config/colorscheme';
 
 export default function App() {
